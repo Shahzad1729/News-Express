@@ -1,0 +1,25 @@
+<%- include('./partials/header.ejs') %>
+   <main>
+        <div class="container-news">
+            <section class="news-grid">
+                <% if (articles!=null) { %>
+                    <% articles.forEach(function(article,index){ %>
+                        <% if (article.title!='[Removed]' ) {%>
+                        <% if (article.urlToImage==null){ %>
+                        <%  article.urlToImage="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" %>
+                        <% }  %>
+                <div class="news-card">
+                    <img src="<%- article.urlToImage %>" alt="" >
+                    <h1><a href="<%- article.url %>"><%- article.title %></a></h1>
+                    <p><%- article.description %></p>
+                    <span><%- article.publishedAt %></span>
+                </div>
+                <% } %>
+                <% }) %>
+                <% } else { %>
+                <h1>No posts found</h1>
+                <% } %>
+            </section>
+        </div>
+    </main>
+<%- include('./partials/footer.ejs') %>

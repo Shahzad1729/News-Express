@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs') %>
+<main>
+    <div class="container">
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, please feel free to contact us using the form below.</p>
+            <form class="contact-form" action="mailto:fa429728@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+</main>
+<%- include('./partials/footer.ejs') %>
